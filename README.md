@@ -1,5 +1,13 @@
 # kp-personal-website
 
-Personal website of Kavi Pather. This repository contains a simple "Hello World" page used for GitHub Pages.
+This site uses a minimal Next.js setup styled with Tailwind CSS.
+It follows the design tokens in `DESIGN_GUIDE.md`.
 
-See [DESIGN_GUIDE.md](DESIGN_GUIDE.md) for layout and styling guidance when updating the site.
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+Blog posts live in the `blog/` folder as markdown files.

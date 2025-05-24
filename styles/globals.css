@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+  @apply font-sans bg-white text-black;
+}
+
+section {
+  @apply py-xl;
+}
+
+.max-prose {
+  @apply max-w-prose mx-auto;
+}
