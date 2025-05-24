@@ -21,3 +21,13 @@ npm run build
 ```
 
 The static files are written to the `out/` directory.
+
+## Deploy
+
+Push the contents of `out/` to the `gh-pages` branch with:
+
+```bash
+npm run deploy
+```
+
+GitHub Pages should be configured to serve from that branch.
