@@ -45,7 +45,11 @@ export default function Home({ posts }: { posts: Post[] }) {
         </nav>
       </header>
 
-      <img src="/images/hero.jpg" alt="Cityscape" className="w-full h-auto" />
+      <img
+        src="/images/hero.jpg"
+        alt="Johannesburg city skyline at dusk"
+        className="w-full h-auto"
+      />
 
       <section className="max-prose">
         <p>
