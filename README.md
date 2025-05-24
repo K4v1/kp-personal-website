@@ -31,3 +31,8 @@ npm run deploy
 ```
 
 GitHub Pages should be configured to serve from that branch.
+Running this command builds the site and publishes the contents of `out/`
+to the `gh-pages` branch so your site updates right away. The repository also
+includes a GitHub Actions workflow that runs `npm run deploy` automatically
+whenever changes are pushed to `main`.
+
