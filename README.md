@@ -11,3 +11,14 @@ npm run dev
 ```
 
 Blog posts live in the `blog/` folder as markdown files.
+
+## Build & Export
+
+Generate the static site for deployment:
+
+```bash
+npm run build
+npm run export
+```
+
+The exported files are written to the `out/` directory.
