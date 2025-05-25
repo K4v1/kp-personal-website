@@ -17,7 +17,7 @@ module.exports = {
         lg: '2rem'
       },
       maxWidth: {
-        prose: '960px'
+        prose: '768px'
       }
     }
   },

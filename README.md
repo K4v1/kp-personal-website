@@ -2,6 +2,7 @@
 
 This site uses a minimal Next.js setup styled with Tailwind CSS.
 It follows the design tokens in `DESIGN_GUIDE.md`.
+All pages wrap content in a `.container` class that centers text and caps width at 768&nbsp;px for comfortable reading.
 
 ## Development
 

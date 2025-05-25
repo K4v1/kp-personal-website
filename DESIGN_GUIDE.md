@@ -11,7 +11,7 @@ This document outlines the design direction and tech stack for future updates to
 - **Text:** `#000000`
 - **Accent color:** `#10A37F`
 - **Font:** Inter (Regular, Medium, Bold)
-- **Layout width:** 960px maximum
+- **Layout width:** 768px maximum
 - **Section spacing:** 64px top and bottom
 
 ## Tech Stack
@@ -33,7 +33,7 @@ extend: {
     lg: '2rem'
   },
   maxWidth: {
-    prose: '960px'
+    prose: '768px'
   }
 }
 ```
