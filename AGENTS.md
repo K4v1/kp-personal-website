@@ -12,9 +12,9 @@ This repository contains a personal website built with Next.js and TypeScript. F
 - Blog posts live in the `blog/` directory as Markdown files with `title` and `date` front matter.
 - Do **not** modify files inside the `out/` folder; that directory is generated at build time.
 
-## Build Checks
-- After modifying code, run `npm install` if dependencies change, then run `npm run build` to ensure the site compiles.
-- There are no automated tests, so the build command serves as the required programmatic check.
+## Build Checks and Export
+- After modifying code, run 'npm run lint' and 'npm run type-check'
+- Then build and export using 'npm run build' and 'npm run export'
 
 ## Pull Request Notes
 - Summarize the changes made and confirm `npm run build` succeeded in the PR description.
