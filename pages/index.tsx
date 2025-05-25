@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import Head from 'next/head'
+import Image from 'next/image'
 
 interface Post {
   date: string
@@ -26,14 +27,19 @@ export default function Home({ posts }: { posts: Post[] }) {
   return (
     <>
       <Head>
-        <title>Kavi Pather</title>
+        <title>Kavi Pather — AI & Analytics Leader</title>
+        <meta
+          name="description"
+          content="Kavi Pather is an AI and analytics leader focused on enterprise transformation."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <header className="flex justify-between items-center py-lg max-prose">
-        <h1 className="text-3xl font-bold leading-tight">
+      <header className="container flex flex-col sm:flex-row sm:justify-between items-center py-lg">
+        <h1 className="text-5xl font-bold leading-tight">
           <span className="block">Kavi</span>
           <span className="block">Pather</span>
         </h1>
-        <nav className="flex items-center space-x-4">
+        <nav className="flex items-center space-x-4 mt-2 sm:mt-0">
           <div className="flex space-x-2 mr-4">
             <a href="https://www.linkedin.com/in/kavipather/" aria-label="LinkedIn">🔗</a>
             <a href="https://x.com/kavi_pather" aria-label="X">✖️</a>
@@ -45,13 +51,19 @@ export default function Home({ posts }: { posts: Post[] }) {
         </nav>
       </header>
 
-      <img
-        src="/images/hero.jpg"
-        alt="Johannesburg city skyline at dusk"
-        className="w-full h-auto"
-      />
+      <div className="container my-xl">
+        <Image
+          src="/images/hero.jpg"
+          alt="Johannesburg city skyline at dusk"
+          width={1920}
+          height={1080}
+          className="w-full h-auto"
+          placeholder="blur"
+          blurDataURL="/images/hero.jpg"
+        />
+      </div>
 
-      <section className="max-prose">
+      <section className="container">
         <p>
           I'm an <strong>AI and analytics leader</strong> working at the intersection of
           technology, business, and human potential. With a foundation in
@@ -65,13 +77,13 @@ export default function Home({ posts }: { posts: Post[] }) {
         </p>
       </section>
 
-      <section className="max-prose">
-        <h2 className="text-xl font-semibold mb-4">Updates</h2>
+      <section className="container">
+        <h2 className="text-3xl font-semibold mb-4">Updates</h2>
         <ul>
-          {posts.map((post) => (
-            <li key={post.date} className="flex justify-between border-b py-2">
-              <span className="text-sm text-right w-32 font-mono">{post.date}</span>
-              <span className="flex-1 ml-4">{post.title}</span>
+          {posts.slice(0, 6).map((post) => (
+            <li key={post.date} className="grid grid-cols-[auto,1fr] gap-4 border-b py-2">
+              <span className="text-sm text-gray-500 w-24 font-mono">{post.date}</span>
+              <span>{post.title}</span>
             </li>
           ))}
         </ul>
@@ -80,15 +92,28 @@ export default function Home({ posts }: { posts: Post[] }) {
         </div>
       </section>
 
-      <section className="max-prose">
-        <h2 className="text-xl font-semibold mb-4">Contact</h2>
-        <p><strong>Kavi Pather</strong></p>
-        <p><a href="mailto:someone@example.com">someone@example.com</a></p>
-        <p><strong>Affiliation:</strong> EY</p>
-        <p>Johannesburg</p>
+      <section className="container">
+        <h2 className="text-3xl font-semibold mb-4">Contact</h2>
+        <ul className="space-y-1">
+          <li>
+            <span className="font-semibold">Name:</span> Kavi Pather
+          </li>
+          <li>
+            <span className="font-semibold">Email:</span>{' '}
+            <a href="mailto:someone@example.com" className="hover:text-accent">
+              someone@example.com
+            </a>
+          </li>
+          <li>
+            <span className="font-semibold">Affiliation:</span> EY
+          </li>
+          <li>
+            <span className="font-semibold">Location:</span> Johannesburg
+          </li>
+        </ul>
       </section>
 
-      <footer className="text-center text-sm text-gray-500 py-lg">
+      <footer className="container border-t border-gray-200 mt-xl pt-lg text-center text-sm text-gray-500">
         © Kavi Pather
       </footer>
     </>

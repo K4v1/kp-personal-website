@@ -12,6 +12,6 @@ section {
   @apply py-xl;
 }
 
-.max-prose {
-  @apply max-w-prose mx-auto;
+.container {
+  @apply max-w-prose mx-auto px-4 sm:px-12;
 }

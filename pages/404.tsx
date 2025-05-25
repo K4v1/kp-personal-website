@@ -6,8 +6,8 @@ export default function NotFound() {
       <Head>
         <title>Page Not Found - Kavi Pather</title>
       </Head>
-      <header className="flex justify-between items-center py-lg max-prose">
-        <h1 className="text-3xl font-bold leading-tight">
+      <header className="container flex flex-col sm:flex-row sm:justify-between items-center py-lg">
+        <h1 className="text-5xl font-bold leading-tight">
           <span className="block">Kavi</span>
           <span className="block">Pather</span>
         </h1>
@@ -22,7 +22,7 @@ export default function NotFound() {
           <a href="/cv" className="hover:text-accent">CV</a>
         </nav>
       </header>
-      <section className="max-prose text-center">
+      <section className="container text-center">
         <h2 className="text-2xl font-semibold mb-4">Page not found</h2>
         <p>The page you&#39;re looking for doesn&#39;t exist.</p>
         <p className="mt-4">
