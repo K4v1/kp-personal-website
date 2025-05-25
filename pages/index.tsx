@@ -26,7 +26,7 @@ export default function Home({ posts }: { posts: Post[] }) {
   return (
     <>
       <Head>
-        <title>Kavi Pather.</title>
+        <title>Kavi Pather</title>
       </Head>
       <header className="flex justify-between items-center py-lg max-prose">
         <h1 className="text-3xl font-bold leading-tight">
