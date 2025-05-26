@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 interface Post {
   date: string
@@ -24,6 +25,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }: { posts: Post[] }) {
+  const { basePath } = useRouter()
   return (
     <>
       <Head>
@@ -53,13 +55,13 @@ export default function Home({ posts }: { posts: Post[] }) {
 
       <div className="container my-xl">
         <Image
-          src="/images/hero.jpg"
+          src={`${basePath}/images/hero.jpg`}
           alt="Johannesburg city skyline at dusk"
           width={1920}
           height={1080}
           className="w-full h-auto"
           placeholder="blur"
-          blurDataURL="/images/hero.jpg"
+          blurDataURL={`${basePath}/images/hero.jpg`}
         />
       </div>
 
