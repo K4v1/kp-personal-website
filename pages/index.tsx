@@ -55,13 +55,13 @@ export default function Home({ posts }: { posts: Post[] }) {
 
       <div className="container my-xl">
         <Image
-          src={`${basePath}/images/hero.jpg`}
+          src={`${basePath}/images/IMG_4753.jpeg`}
           alt="Johannesburg city skyline at dusk"
           width={1920}
           height={1080}
           className="w-full h-auto"
           placeholder="blur"
-          blurDataURL={`${basePath}/images/hero.jpg`}
+          blurDataURL={`${basePath}/images/IMG_4753.jpeg`}
         />
       </div>
 
